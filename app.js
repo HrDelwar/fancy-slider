@@ -1,3 +1,4 @@
+
 const imagesArea = document.querySelector('.images');
 const gallery = document.querySelector('.gallery');
 const galleryHeader = document.querySelector('.gallery-header');
@@ -10,11 +11,9 @@ const durationInput = document.getElementById('duration');//duration input id
 // selected image 
 let sliders = [];
 
-
 // If this key doesn't work
 // Find the name in the url and go to their website
 // to create your own api key
-const KEY = '15674931-a9d714b6e9d654524df198e00&q';
 
 // show images 
 const showImages = (images) => {
@@ -32,6 +31,7 @@ const showImages = (images) => {
   toggleDisplay();
   showMessage('success', 'Image load success.');
 }
+const KEY ="15674931-a9d714b6e9d654524df198e00&q";
 
 //get  image  from api
 const getImages = async (query) => {
@@ -51,6 +51,7 @@ const getImages = async (query) => {
     showMessage('not-found', 'Something is wrong! Please try again.')
   }
 }
+getImages("river")
 
 let slideIndex = 0;
 
